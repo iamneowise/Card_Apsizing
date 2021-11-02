@@ -1,0 +1,98 @@
+/* body {
+    background-image:
+    linear-gradient(45deg, rgb(21, 255, 0) 25%, transparent 25%), 
+    linear-gradient(135deg, rgb(21, 255, 0) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgb(21, 255, 0) 75%),
+    linear-gradient(135deg, transparent 75%, rgb(21, 255, 0) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 0, 10px -10px, 0px 10px;
+} */
+
+body, html {
+  background-image: url("bg.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: blanchedalmond;
+}
+
+.image-style{
+    width: 100%;
+    height: 100%;
+}
+.flip-box {
+    background-color: transparent;
+    margin-top: 100px;
+    margin-left: 450px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-box-back {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .centered {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .score {
+    background-color: black;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.item4 {
+    display: flex;
+    height: 40px;
+    margin-left: 20px ;
+    margin-bottom: -10px;
+    margin-right: 20px;
+}
